@@ -86,8 +86,8 @@ for i = 1:max_iter;
     L_last = L;  
 end;
 if i == max_iter
-    warning('Bayes:maxIter', ...
-        'Bayesian logistic regression reached maximum number of iterations.');
+    %warning('Bayes:maxIter', ...
+    %    'Bayesian logistic regression reached maximum number of iterations.');
 end
 
 %% add constant terms to variational bound
