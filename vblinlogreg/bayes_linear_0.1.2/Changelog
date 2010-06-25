@@ -1,0 +1,26 @@
+2010 May 17  v 0.1.2  Jan Drugowitsch
+
+* bayes_linear_fit.m:
+  Cleaned up comments, precomputed some gammaln values
+
+* bayes_linear_fit_ard.m:
+  Cleaned up comments, precomputed some gammaln values
+
+* bayes_linear_post.m:
+  Cleaned up comments
+
+* logdet.m:
+  Cleaned up comments
+
+* bayes_linear_notes.pdf:
+  Fixed some typos
+  Added Implementation section
+
+2009 Sep 17  v 0.1.1  Jan Drugowitsch
+
+* bayes_linear_notes.pdf:
+  Fixed some typos - thanks to Iman S. Mossavat for pointing them out
+
+2008 Apr     v 0.1   Jan Drugowitsch
+
+* Initial release
