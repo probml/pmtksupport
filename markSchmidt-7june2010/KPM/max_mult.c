@@ -26,7 +26,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
   m=mxGetM(prhs[0]);
   n=mxGetN(prhs[1]);
   plhs[0]=mxCreateDoubleMatrix(m, n, mxREAL);
-  arr3=mxMalloc(m*n*sizeof(double));
+  arr3=mxGetPr(plhs[0]);
 
   for (rows=0; rows<m ; rows++)
     for (cols=0; cols<n ; cols++)
@@ -41,6 +41,5 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
       arr3[rows+cols*m]=y1;
     }
 
-  mxSetPr(plhs[0], arr3);
 	 
 }
