@@ -26,22 +26,17 @@ function P = GWishartFit(Data, G, GWprior)
 %Get data size
 [n p] = size(Data.X);
 
-%Set default tolerance
-if nargin < 5
-  Ptol = 1e-4; 
-end
-
 % get G-Wishart prior params
 d0 = GWprior.d0;
 S0 = GWprior.S0;
 
 %Check that graph size matches number of data variables
-if (size(G,1) ~= size(G,2)) | (size(G,1) ~= p)
+if (size(G,1) ~= size(G,2)) || (size(G,1) ~= p)
   error('GWishartScore::Fit: G must be p-by-p, with p = # cols in Data.X');
 end
 
 % check prior size violations
-if (size(S0,1) ~= size(S0,2)) | (size(S0,1) ~= p)
+if (size(S0,1) ~= size(S0,2)) || (size(S0,1) ~= p)
   error('GWishartScore::Fit: GWprior.S0 must be p-by-p, with p = # cols in Data.X \n');
 end
 
