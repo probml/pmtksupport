@@ -1,0 +1,38 @@
+display(log)
+check(C:/kmurphy/svnCheckout/root/code/learning/sampling/BUGS/matbugs/schools_model.txt)
+model is syntactically correct
+data(C:/kmurphy/svnCheckout/root/code/learning/sampling/BUGS/matbugs/tmp/data.txt)
+data loaded
+compile(3)
+model compiled
+inits(1,C:/kmurphy/svnCheckout/root/code/learning/sampling/BUGS/matbugs/tmp/init_1.txt)
+chain initialized but other chain(s) contain uninitialized variables
+inits(2,C:/kmurphy/svnCheckout/root/code/learning/sampling/BUGS/matbugs/tmp/init_2.txt)
+chain initialized but other chain(s) contain uninitialized variables
+inits(3,C:/kmurphy/svnCheckout/root/code/learning/sampling/BUGS/matbugs/tmp/init_3.txt)
+model is initialized
+refresh(100)
+gen.inits()
+command #Bugs:gen.inits cannot be executed (is greyed out)
+update(1000)
+set(theta)
+set(mu.theta)
+set(sigma.theta)
+thin.updater(10)
+update(500)
+coda(*,C:/kmurphy/svnCheckout/root/code/learning/sampling/BUGS/matbugs/tmp/coda)
+stats(*)
+
+Node statistics
+	 node	 mean	 sd	 MC error	2.5%	median	97.5%	start	sample
+	mu.theta	7.639	5.081	0.1715	-2.524	7.624	18.03	1001	1500
+	sigma.theta	6.815	5.91	0.2234	0.2156	5.526	22.16	1001	1500
+	theta[1]	11.6	8.673	0.2949	-1.731	10.16	32.61	1001	1500
+	theta[2]	7.932	6.199	0.1803	-4.347	7.867	20.51	1001	1500
+	theta[3]	5.911	8.001	0.2314	-12.09	6.576	20.2	1001	1500
+	theta[4]	7.467	6.469	0.1899	-5.926	7.29	20.97	1001	1500
+	theta[5]	5.102	6.35	0.2235	-8.715	5.421	16.25	1001	1500
+	theta[6]	5.957	6.802	0.2118	-8.824	6.243	18.46	1001	1500
+	theta[7]	10.59	6.615	0.2096	-0.8319	10.0	25.48	1001	1500
+	theta[8]	8.143	7.974	0.2524	-7.525	7.934	25.78	1001	1500
+history(*,C:/kmurphy/svnCheckout/root/code/learning/sampling/BUGS/matbugs/tmp/history.txt)
