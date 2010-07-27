@@ -143,6 +143,8 @@ else
     scriptFile = [Bugdir,'\','script.txt'];
 end
 
+scriptFile = sprintf('%s.txt', tempname); % KPM added 26July2010
+
 %bugsModel = [pwd, '/', bugsModel];
 %bugsModel = fullfile(pwd, bugsModel);
 bugsModel = strrep(bugsModel, '\', '/'); % winBUGS wants a/b not a\b
@@ -284,6 +286,8 @@ else
  %str = ['"', Bugdir, '\Winbugs14.exe" /PAR script.txt'];
 end
 str = ['"',f,'" /PAR script.txt'];
+%str = ['"', f, '" /PAR ', '"', scriptFile, '"'] % KPM
+%system(str);
 dos(str); % DOS wants a\b
 
 
@@ -292,6 +296,9 @@ if openBUGS
   codaIndex = [codaFile, 'CODAindex.txt'];
 else
   codaIndex = [codaFile, 'Index.txt'];
+end
+if ~exist(codaIndex,'file')
+  error('error running winbugs, did not produce coda file')
 end
 for i=1:nChains
   if openBUGS
