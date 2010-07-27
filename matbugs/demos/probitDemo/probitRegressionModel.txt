@@ -1,0 +1,17 @@
+model {
+  beta[1:p] ~ dmnorm(mu[], precMat[,])
+  #for (j in 1:p) {
+  #  beta[j] ~ dnorm(mu[j], precMat[j,j])
+  # }
+  for (i in 1:n) {
+    s[i] <- inprod(beta[], X[i,])
+
+    #probit(pr[i]) <- s[i]
+    # The url below
+    #http://www.math.helsinki.fi/openbugs/data/Docu/Tips%20and%20Troubleshooting.html
+    # suggest replacing  probit(p[i]) <- delta[i] with p[i] <- phi(delta[i])
+    pr[i] <- phi(s[i]) 
+
+    y[i] ~ dbern(pr[i])
+  }
+}
