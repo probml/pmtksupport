@@ -7,4 +7,8 @@ function x = randgamma(a)
 % Gamma(a) has density function p(x) = x^(a-1)*exp(-x)/gamma(a).
 
 % This function is implemented in MEX (randgamma.c)
-error('You must run install_lightspeed first');
+%PMTKmodified Matt Dunham
+
+x = randg(a); % This is only called if randgamma.mex* is not found. It is 
+% a statistics toolbox function, but is available in Octave
+end
