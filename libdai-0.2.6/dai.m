@@ -12,3 +12,4 @@
 %         qv         = linear cell array containing all variable beliefs.
 %         qf         = linear cell array containing all factor beliefs.
 %         qmap       = linear array containing the MAP state (only for BP,JTree).
+error('libdai must be compiled for your system, please see <a href="http://people.kyb.tuebingen.mpg.de/jorism/libDAI/doc/build.html"> this page</a> for details.');
