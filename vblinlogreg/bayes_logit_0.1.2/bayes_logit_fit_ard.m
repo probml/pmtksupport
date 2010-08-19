@@ -33,7 +33,7 @@ b0 = 1e-4;
 
 %% pre-compute some constants
 [N, D] = size(X);
-max_iter = 100;
+max_iter = 200;
 an = a0 + 0.5;    D_gammaln_an_an = D * (gammaln(an) + an);
 % t_W = 0.5 * sum(X .* repmat(y, 1, D), 1)'
 t_w = 0.5 * sum(bsxfun(@times, X, y), 1)';
