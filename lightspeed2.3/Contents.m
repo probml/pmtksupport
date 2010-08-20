@@ -85,8 +85,8 @@
 %   col_sum          - Sum for each column.
 %   setdiag          - Modify the diagonals of a matrix.
 %   finddiag         - Index of elements on diagonals.
-%   argmax           - Index of maximum element.
-%   argmin           - Index of minimum element.
+%   argmaxLS           - Index of maximum element.
+%   argminLS           - Index of minimum element.
 %
 % Flop counting
 %   flops            - Read/write flop counter.

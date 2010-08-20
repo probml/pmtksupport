@@ -1,4 +1,4 @@
-function A = setdiag(A,v,k)
+function A = setdiagLS(A,v,k)
 %SETDIAG  Modify the diagonal(s) of a matrix.
 % SETDIAG(A,V) returns a copy of A where the main diagonal is set to V.
 % V can be a scalar or vector.

@@ -41,7 +41,7 @@ dend = find(dd < 0);
 for i = 1:length(dstart)
   % place the zero at the first element in the original order
   d(dstart(i)) = 1;
-  d(dstart(i)-1 + argmin(ord(dstart(i):dend(i)))) = 0;
+  d(dstart(i)-1 + argminLS(ord(dstart(i):dend(i)))) = 0;
 end
 d(ord) = d;
 d = d';

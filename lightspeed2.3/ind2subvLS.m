@@ -1,4 +1,4 @@
-function sub = ind2subv(siz,index)
+function sub = ind2subvLS(siz,index)
 %IND2SUBV   Subscript vector from linear index.
 % IND2SUBV(SIZ,IND) returns a vector of the equivalent subscript values 
 % corresponding to a single index into an array of size SIZ.

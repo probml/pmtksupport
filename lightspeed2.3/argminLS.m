@@ -1,4 +1,4 @@
-function index = argmin(x)
+function index = argminLS(x)
 %ARGMIN   Index of minimum element.
 % ARGMIN(X) returns an index I such that X(I) == MIN(X(:)).
 %

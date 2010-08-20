@@ -12,7 +12,7 @@ for i = 1:N
   m2 = m2 + X.*X;
 end
 i = 0:(d-1);
-sTrue = sum(digamma(a - i*0.5));
+sTrue = sum(digammaLS(a - i*0.5));
 m = m/N;
 s = s/N;
 v = m2/N - m.*m;
