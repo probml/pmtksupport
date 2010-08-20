@@ -1,4 +1,4 @@
-function index = argmax(x)
+function index = argmaxLS(x)
 %ARGMAX   Index of maximum element.
 % ARGMAX(X) returns an index I such that X(I) == MAX(X(:)).
 %
