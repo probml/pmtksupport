@@ -1,4 +1,4 @@
-function out = logdet(A)
+function out = logdetBL(A)
 %% out = logdet(A)
 %
 % computes the log(det(A)) of a positive definite A.
