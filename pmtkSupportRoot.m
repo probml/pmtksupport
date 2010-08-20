@@ -5,3 +5,4 @@ if w(1) == '.'
     w = fullfile(pwd, w(3:end));
 end
 r = fileparts(w);
+end
