@@ -1,4 +1,4 @@
-function [names,isdirs] = glob(pattern,prefix)
+function [names,isdirs] = globLS(pattern,prefix)
 %GLOB   Filename expansion via wildcards.
 % GLOB(PATTERN) returns a cell array of file/directory names which match the 
 % PATTERN.  
@@ -20,21 +20,21 @@ function [names,isdirs] = glob(pattern,prefix)
 %
 % Examples:
 %   % if 'work' is a subdirectory, this returns only 'work', not its contents:
-%   glob('work')
+%   globLS('work')
 %   % returns 'work/fun.m' (not 'fun.m'):
-%   glob('work/fun.m')
+%   globLS('work/fun.m')
 %   % all m-files in 'work', prefixed with 'work/':
-%   glob('work/*.m')
+%   globLS('work/*.m')
 %   % all files named 'fun.m' in 'work' or any subdirectory of 'work':
-%   glob('work/**fun.m') 
+%   globLS('work/**fun.m') 
 %   % all m-files in 'work' or any subdirectory of 'work':
-%   glob('work/***.m')
+%   globLS('work/***.m')
 %   % all files named 'fun.m' any subdirectory of 'work' (but not 'work'):
-%   glob('work/**/fun.m') 
+%   globLS('work/**/fun.m') 
 %   % all files named 'fun.m' in any subdirectory of '.':
-%   glob('**fun.m') 
+%   globLS('**fun.m') 
 %   % all files in all subdirectories:
-%   glob('***') 
+%   globLS('***') 
 %
 % See also globstrings.
 
@@ -74,7 +74,7 @@ if ~isempty(i)
   first = first(1:(i-1));
   new_pattern = [first rest];
   % if the pattern was 'a**b/c', new_pattern is 'ab/c'
-  [names,isdirs] = glob(new_pattern,prefix);
+  [names,isdirs] = globLS(new_pattern,prefix);
   first = [first '*'];
   rest = ['**' rest];
   % if the pattern was 'a**b/c', it is now 'a*/**b/c'
@@ -94,7 +94,7 @@ for i = 1:length(first_files)
     names{end+1} = new_prefix;
     isdirs(end+1) = first_files(i).isdir;
   elseif first_files(i).isdir
-    [new_names, new_isdirs] = glob(rest,new_prefix);
+    [new_names, new_isdirs] = globLS(rest,new_prefix);
     names = cellcat(names, new_names);
     isdirs = [isdirs; new_isdirs];
   end

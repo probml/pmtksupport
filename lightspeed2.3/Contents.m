@@ -56,7 +56,7 @@
 %   find_sameobject  - Find an object in a cell array.
 %   toJava           - Convert to Java representation.
 %   fromJava         - Convert from Java to Matlab.
-%   glob             - Filename expansion via wildcards.
+%   globLS             - Filename expansion via wildcards.
 %   globstrings      - String matching via wildcards.
 %
 % Argument lists
