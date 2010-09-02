@@ -230,7 +230,7 @@ while funEvals <= maxIter
     end
 
     % Check optimality
-        if optCond < optTol
+        if (optCond < optTol) && (verbose >= 1)
             fprintf('First-Order Optimality Conditions Below optTol\n');
             break;
         end
