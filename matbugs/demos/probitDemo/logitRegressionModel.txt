@@ -1,0 +1,8 @@
+model {
+  beta[1:p] ~ dmnorm(mu[], precMat[,])
+  for (i in 1:n) {
+    s[i] <- inprod(beta[], X[i,])
+    logit(pr[i]) <- s[i]
+    y[i] ~ dbern(pr[i])
+  }
+}

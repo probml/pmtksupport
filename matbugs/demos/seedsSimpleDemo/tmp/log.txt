@@ -1,0 +1,35 @@
+display(log)
+check(C:/kmurphy/GoogleCode/matbugs/demos/seedsSimpleDemo/seeds_model.txt)
+model is syntactically correct
+data(C:/kmurphy/GoogleCode/matbugs/demos/seedsSimpleDemo/tmp/data.txt)
+data loaded
+compile(2)
+model compiled
+inits(1,C:/kmurphy/GoogleCode/matbugs/demos/seedsSimpleDemo/tmp/init_1.txt)
+chain initialized but other chain(s) contain uninitialized variables
+inits(2,C:/kmurphy/GoogleCode/matbugs/demos/seedsSimpleDemo/tmp/init_2.txt)
+model is initialized
+refresh(100)
+gen.inits()
+command #Bugs:gen.inits cannot be executed (is greyed out)
+update(1000)
+set(alpha0)
+set(alpha1)
+set(alpha2)
+set(alpha12)
+thin.updater(1)
+update(2000)
+coda(*,C:/kmurphy/GoogleCode/matbugs/demos/seedsSimpleDemo/tmp/coda)
+stats(*)
+
+Node statistics
+	 node	 mean	 sd	 MC error	2.5%	median	97.5%	start	sample
+	alpha0	-0.569	0.2036	0.013	-1.006	-0.5634	-0.1913	1001	4000
+	alpha1	0.108	0.3059	0.01696	-0.4926	0.1062	0.7432	1001	4000
+	alpha12	-0.8544	0.4271	0.02464	-1.743	-0.8403	-0.05788	1001	4000
+	alpha2	1.377	0.2934	0.01935	0.8428	1.361	2.027	1001	4000
+history(*,C:/kmurphy/GoogleCode/matbugs/demos/seedsSimpleDemo/tmp/history.txt)
+
+History
+
+save(C:/kmurphy/GoogleCode/matbugs/demos/seedsSimpleDemo/tmp/log.txt)

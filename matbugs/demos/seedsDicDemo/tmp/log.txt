@@ -1,0 +1,39 @@
+display(log)
+check(C:/kmurphy/GoogleCode/matbugs/demos/seedsDicDemo/seeds_full_model.txt)
+model is syntactically correct
+data(C:/kmurphy/GoogleCode/matbugs/demos/seedsDicDemo/tmp/data.txt)
+data loaded
+compile(1)
+model compiled
+inits(1,C:/kmurphy/GoogleCode/matbugs/demos/seedsDicDemo/tmp/init_1.txt)
+this chain contains uninitialized variables
+refresh(100)
+gen.inits()
+initial values generated, model initialized
+update(1000)
+set(alpha0)
+set(alpha1)
+set(alpha2)
+set(alpha12)
+set(sigma)
+dic.set()
+thin.updater(1)
+update(2000)
+coda(*,C:/kmurphy/GoogleCode/matbugs/demos/seedsDicDemo/tmp/coda)
+stats(*)
+
+Node statistics
+	 node	 mean	 sd	 MC error	2.5%	median	97.5%	start	sample
+	alpha0	-0.546	0.1983	0.01732	-0.9078	-0.5509	-0.1393	1001	2000
+	alpha1	0.07743	0.3254	0.02901	-0.623	0.08846	0.6635	1001	2000
+	alpha12	-0.8272	0.4439	0.03628	-1.681	-0.8334	0.09636	1001	2000
+	alpha2	1.345	0.2843	0.02403	0.7419	1.355	1.893	1001	2000
+	sigma	0.3212	0.1511	0.01462	0.0187	0.3143	0.6386	1001	2000
+dic.stats()
+
+DIC
+Dbar = post.mean of -2logL; Dhat = -2LogL at post.mean of stochastic nodes
+	Dbar	Dhat	pD	DIC	
+r	100.902	89.032	11.870	112.772	
+total	100.902	89.032	11.870	112.772	
+save(C:/kmurphy/GoogleCode/matbugs/demos/seedsDicDemo/tmp/log.txt)

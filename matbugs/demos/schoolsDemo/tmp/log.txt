@@ -1,0 +1,40 @@
+display(log)
+check(C:/kmurphy/GoogleCode/matbugs/demos/schoolsDemo/schools_model.txt)
+model is syntactically correct
+data(C:/kmurphy/GoogleCode/matbugs/demos/schoolsDemo/tmp/data.txt)
+data loaded
+compile(3)
+model compiled
+inits(1,C:/kmurphy/GoogleCode/matbugs/demos/schoolsDemo/tmp/init_1.txt)
+undefined variable
+inits(2,C:/kmurphy/GoogleCode/matbugs/demos/schoolsDemo/tmp/init_2.txt)
+inits(3,C:/kmurphy/GoogleCode/matbugs/demos/schoolsDemo/tmp/init_3.txt)
+refresh(100)
+gen.inits()
+initial values generated, model initialized
+update(1000)
+set(theta)
+set(mu.theta)
+set(sigma.theta)
+thin.updater(10)
+update(500)
+coda(*,C:/kmurphy/GoogleCode/matbugs/demos/schoolsDemo/tmp/coda)
+stats(*)
+
+Node statistics
+	 node	 mean	 sd	 MC error	2.5%	median	97.5%	start	sample
+	mu.theta	8.115	5.027	0.1319	-1.649	7.921	18.57	1001	1500
+	sigma.theta	6.333	5.628	0.2439	0.1845	4.908	19.87	1001	1500
+	theta[1]	11.43	8.285	0.2609	-1.292	10.09	32.95	1001	1500
+	theta[2]	7.932	5.966	0.1416	-4.167	7.878	19.76	1001	1500
+	theta[3]	6.505	7.56	0.1935	-11.12	6.914	20.71	1001	1500
+	theta[4]	7.77	6.348	0.1632	-5.107	7.707	20.65	1001	1500
+	theta[5]	5.268	6.377	0.2144	-8.973	5.753	16.56	1001	1500
+	theta[6]	6.558	6.934	0.1635	-9.316	6.883	19.52	1001	1500
+	theta[7]	10.7	6.705	0.1891	-0.3091	9.859	25.25	1001	1500
+	theta[8]	8.444	7.518	0.1981	-6.193	8.032	24.27	1001	1500
+history(*,C:/kmurphy/GoogleCode/matbugs/demos/schoolsDemo/tmp/history.txt)
+
+History
+
+save(C:/kmurphy/GoogleCode/matbugs/demos/schoolsDemo/tmp/log.txt)

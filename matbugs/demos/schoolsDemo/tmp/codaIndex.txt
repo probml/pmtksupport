@@ -1,0 +1,10 @@
+mu.theta	1	500
+sigma.theta	501	1000
+theta[1]	1001	1500
+theta[2]	1501	2000
+theta[3]	2001	2500
+theta[4]	2501	3000
+theta[5]	3001	3500
+theta[6]	3501	4000
+theta[7]	4001	4500
+theta[8]	4501	5000
