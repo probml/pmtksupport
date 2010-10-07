@@ -558,6 +558,9 @@ classdef graphViz4Matlab < handle
                     end
                 end
                 edge.arrow = plot(X,Y,'LineWidth',2,'HitTest','off','Color',edgeColor);
+                %fprintf('%s to %s \n', edge.from.label, edge.to.label);
+                %edgeColor
+                
                 if(~obj.undirected)
                     arrowHead = obj.displayArrowHead(X,Y,Xarrow,Yarrow,edgeColor);
                     edge.arrow = [edge.arrow arrowHead];
