@@ -1,0 +1,10 @@
+test_OMP
+test_Lasso
+test_CD
+test_Nesterov
+test_SparseProject
+test_CalcAAt
+test_CalcXAt
+test_ConjGrad
+test_TrainDL
+test_TrainDL_Memory

@@ -1,0 +1,210 @@
+16 September 2009
+SPAMS Software License agreement
+SPAMS © 2009_INRIA-ENS-UNIVERSITY OF MINNESOTA
+
+BETWEEN
+THE INSTITUT NATIONAL DE RECHERCHE EN INFORMATIQUE ET EN AUTOMATIQUE (INRIA),
+
+a public scientific and technological research agency governed by decree no. 85-831 of 2 August 1985 as amended,
+Domaine de Voluceau – BP 105 – Rocquencourt, 78153 LE CHESNAY Cedex, France. Represented by its President and Chief Executive Officer, Michel COSNARD.
+Hereafter referred to as "INRIA"
+
+AND
+
+THE USER: By installing or using the SPAMS Software described in this license agreement, you agree to be bound by the terms and conditions of this agreement and to become a Party to it.
+If you do not accept the terms and conditions of this license agreement, you must not click the "Accept" button or install or use the Software.
+
+Hereafter referred to as "the Licensee".
+
+Hereafter referred to individually as "the Party" and collectively as "the Parties".
+ 
+
+PREAMBLE
+
+INRIA, ENS (the Ecole Normale Superieure) and the University of Minnesota have designed and produced the SPAMS software for which they jointly own all the intellectual property rights.
+
+The initial version 1.0 of SPAMS from September 2009 has been registered by INRIA with France's software protection agency (Agence pour la Protection des Programmes - APP) under number IDDN.FR.001.380004.000.S.P.2009.000.31235
+
+ENS, the University of Minnesota, and INRIA are co-owners of the property rights over SPAMS software. ENS and University of Minnesota have granted permission to INRIA to put a free usage licence for the SPAMS Software online on its website in executable form, provided that this license is granted only for research, educational or testing purposes.
+
+The Licensee wishes to be able to use the SPAMS Software for research, educational or testing purposes.
+
+
+Clause 1/DEFINITIONS
+
+Bug: any defect or non-compliance, or any failure occurring during normal use of the Software in accordance with the procedures described in the Documentation.
+
+Derivatives: any derivative or composite works (including all related software or packages) created from the Software.
+
+Documentation: the electronic files available at the time that the Object Code are downloaded, containing the installation explanations and any technical explanations related to the software.
+
+Licensee: the corporate body to whom INRIA grants a license to use its SPAMS Software.
+
+Object Code: the binary files resulting from the compilation of the source code.
+
+Software: the SPAMS Software, is an optimization toolbox. It contains efficient implementations of algorithms for sparse signal decompositions, dictionary learning for sparse representations, projection on some convex sets, and matrix factorization with different regularizations.
+
+The software was registered at the French Agency for Protecting Programs (Agence pour la Protection des Programmes) under number IDDN.FR.001.380004.000.S.P.2009.000.31235 on 15 September 2009.
+
+The term "Software" means SPAMS in object code format, together with the associated Documentation.
+
+Use/User: the rights to duplicate in whole or in part, permanently or temporarily, on any present or future medium, by any means and in any form; the rights to use.
+ 
+
+Clause 2/PURPOSE
+
+INRIA grants the Licensee a license to use the Software on the terms and conditions defined hereafter.
+
+The code concerned by this contract is the Linux, Mac OS and Windows Object Code.
+
+
+Clause 3/TERM
+
+This agreement comes into effect as soon as the Software is downloaded from the address indicated in clause 9, for a term of fifty (50) years.
+
+
+Clause 4/TERRITORY
+
+This is a worldwide license.
+ 
+
+Clause 5/NON-EXCLUSIVITY – NON-TRANSFERABILITY
+
+This license agreement is non-exclusive and grants the Licensee only a right of personal use. In no event may the Licensee grant a sublicense of the Software to a third party.
+
+This license agreement is concluded intuitu personae and is therefore non-transferable. In no event may it be transferred in whole or in part to a third party either in return for remuneration or free of charge.
+ 
+
+Clause 6/FINANCIAL TERMS
+
+INRIA grants the license to the Licensee free of charge.
+ 
+
+Clause 7/OWNERSHIP OF THE SOFTWARE
+
+The Licensee recognizes that the proprietary rights to the Software are held by INRIA, ENS and University of Minnesota and that this agreement does not entail any transfer of ownership for its own benefit.
+
+The Licensee will take all necessary measures to protect the ownership rights to the Software. It shall not delete and re-copy the mention of the source of the Software and the authors' names (SPAMS© 2009_INRIA-ENS-UNIVERSITY OF MINNESOTA). The Licensee will respect these references, whether they appear in the Object Code or the Documentation supplied by INRIA or in any publication referring to the Software.
+
+The Licensee shall leave these references to the authors' names and the copyright status on the backup copy.
+
+In the event of an attempt to seize or attach the Software or any medium containing it, the Licensee shall:
+
+    * advise INRIA immediately by registered letter with acknowledgement of receipt sent to the address indicated in clause 20 or by electronic message to the technical contact, whose address is indicated in clause 8 below,
+    * inform the third party of the existence of INRIA’s rights over the Software. 
+
+The Licensee shall not pledge the Software rights granted under this agreement.
+
+If the Licensee intends to industrialize and market the Software either in return for remuneration or free of charge, it must obtain express permission from INRIA in advance. Such actions will be covered by a separate agreement.
+
+
+Clause 8/TECHNICAL CONTACT
+
+INRIA will designate a technical contact to monitor this agreement. The technical contact at the time of signature will be Julien Mairal, PHD student in the WILLOW Project (julien.mairal@inria.fr).
+
+INRIA reserves the right to designate another technical contact at a later date. It will indicate any change on the Internet pages used to access the Software.
+ 
+
+Clause 9/DELIVERY OF THE SOFTWARE
+
+The Licensee can download the Software at the following address:
+
+http://www.di.ens.fr/willow/SPAMS/
+
+By accepting this agreement, the Licensee can download the Software directly. In case of technical problems, it should contact the technical contact indicated in clause 8 above.
+
+INRIA cannot be held liable for the temporary or permanent unavailability of the Software access pages.
+ 
+
+Clause 10/RIGHT OF USE OF THE SOFTWARE
+
+The Software must be used in accordance with:
+    * its intended purpose, i.e. for research, educational and/or test purposes, 
+    * the terms and conditions of this license agreement, 
+    * and the provisions of the Documentation. 
+
+Under the terms of article L 335-3 of the French Intellectual Property Code, the Licensee recognizes that any use not in accordance with the above provisions will constitute a violation of the right of use of the Software and therefore be an infringement of intellectual property rights.
+
+The Licensee is prohibited from:
+    * making any copy other than the backup copy or those made by the Licensee to meet its own research and testing need on the Software.
+    * decompile or disassemble the Software.
+    * creating any Derivatives,
+    * making the Software directly or indirectly available to a third party by transfer, lease or loan either for a consideration or free of charge, or available on the Internet. 
+ 
+
+Clause 11/LICENSEE’S ENGAGEMENTS
+
+The Licensee shall integrally mention the name and the origin of the Software when Using it and into publications making reference to it.
+
+The Licensee shall inform INRIA’s technical contact of any Bugs that it notes while using the Software.
+
+INRIA will decide individually whether any modifications are required to the Software.
+
+If INRIA modifies the Software, the modified version will be governed by the terms and conditions of this license agreement.
+ 
+
+Clause 12/WARRANTY
+
+It is up to the Licensee to ensure that the Software’s technical characteristics and features meet its needs.
+
+INRIA hereby informs the Licensee that the Software is a prototype based on the results of its research projects and that it may therefore contain Bugs for which it cannot be held liable.
+
+INRIA does not warrant that the Software is error-free, that it will function without interruption, that it will be compatible with the Licensee’s equipment and software configuration, or that it will meet the Licensee’s needs.
+
+INRIA warrants that to the best of its knowledge the Software does not infringe any intellectual property rights belonging to third parties.
+
+The Parties agree that INRIA is not required to provide the Licensee with a warranty service to ensure that the Software functions correctly, other than the correction of any Bugs that INRIA may make as provided for in clause 11 of this license agreement.
+
+ 
+
+Clause 13/LIABILITY
+
+As the intellectual property rights are granted free of charge, the Parties expressly agree that INRIA will in no event be held liable for any direct or indirect damages incurred by the Licensee as a result of using the Software, problems encountered during its use or the impossibility of using it.
+
+The Licensee alone is responsible for the organization and running of the Software and for the results obtained.
+ 
+
+Clause 14/MONITORING AND UPDATING OF THE SOFTWARE
+
+INRIA is not responsible for monitoring the Software or maintaining it under this license agreement.
+
+However, INRIA will keep the Licensee informed of subsequent updates via its website and may communicate them to it on agreed terms.
+ 
+
+Clause 15/TERMINATION
+
+INRIA reserves the right to terminate this agreement at any time.
+
+INRIA will inform the Licensee of the termination of this agreement via an information message displayed on the website http://www.di.ens.fr/willow/SPAMS/.
+
+Two (2) weeks after the message has been displayed on the website, the Licensee will no longer be able to use the Software.
+ 
+
+Clause 16/DESTRUCTION
+
+In the event of the termination of the contractual relationship between the Parties for any reason or at the express request of INRIA, the Licensee shall, within one (1) month of the termination, destroy all components of the Software that have been delivered to it and inform the technical contact by email.
+ 
+
+Clause 17/SEVERABILITY
+
+If any provision of this agreement is deemed or declared to be invalid under applicable law or regulation or by final decision of a competent jurisdiction, the remaining provisions will remain in full force and effect.
+ 
+
+Clause 18/APPLICABLE LAW-DISPUTES
+
+This agreement is governed by French law. Any dispute relating to the interpretation or performance of this agreement that cannot be amicably resolved within fifteen (15) days, shall be brought before the competent French court.
+ 
+
+Clause 19/NOTICES
+
+All correspondence addressed to INRIA shall be sent to:
+
+INRIA
+Centre de recherche INRIA Paris - Rocquencourt
+Service Administratif and Financier-Bâtiment 10
+Bureau des affaires contractuelles
+Domaine de Voluceau,
+BP105
+78153 Le Chesnay Cedex.
+CJ/SAF-Rocq              7/7
+
