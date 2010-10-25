@@ -1,3 +1,5 @@
+% Modifications to mplp_refine for the pmtk package
+
 % Function: mplp_refine
 % Implements a MAP-LP approximation algorithm as described in
 % Sontag et al, UAI 08.
@@ -115,9 +117,14 @@ gmplp_state = gmplp_init(regions,intersects,my_region_lambda,local,-1,0,lambda);
 time_init = toc;
 
 
-fprintf('Saving gmplp_state to C file format\n');
+% we save the temporary data to the directory
+% where the executable is so it can find it
+folder = fullfile(pmtk3Root(), 'data')
+%[folder, fname, extension] = fileparts(which('mplp_refine_pmtk')); %#ok
+fprintf('Saving gmplp_state to %s\n', folder);
 
-save_gmplp_state_for_c(gmplp_state, '.');
+
+save_gmplp_state_for_c(gmplp_state, folder);
 
 fprintf('Done Saving\n');
 
@@ -140,16 +147,23 @@ elseif params.file_type == 1
     params.obj_del_thr,params.int_gap_thr, ...
     params.num_rows, params.num_cols);
 end
+
+
 if 0
   eval(sprintf('!./%s', str))
 else
+  % ensure that any temporary files are written 
+  % to the location of the executable so it can find them
+  curFolder = pwd;
+  cd(folder)
   system(str)
+  cd(curFolder)
 end
 
 
-load inthist.txt
-load objhist.txt
-load res.txt
+load(fullfile(folder, 'inthist.txt'))
+load(fullfile(folder, 'objhist.txt'))
+load(fullfile(folder, 'res.txt'))
 
 assign = res+1;
 dual_obj_hist = objhist;
