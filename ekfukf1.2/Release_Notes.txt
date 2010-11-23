@@ -1,0 +1,24 @@
+####################################################################
+#
+# Release notes for EKF/UKF                  
+#
+# $Id: Release_Notes.txt 112 2007-09-04 12:28:19Z ssarkka $
+#
+####################################################################
+
+---------------------------------------------
+  Version 1.2:  Mon Feb  25 2008
+---------------------------------------------
+	* Made few more minor corrections to function descriptions.
+	* Fixed ukf_update2
+	* Added functions and demos for IMM filters and smoothers
+
+---------------------------------------------
+  Version 1.1:  Tue Sep  4 2007
+---------------------------------------------
+	* Made minor corrections to function descriptions.
+
+---------------------------------------------
+  Version 1.0:  Tue Aug  7 2007
+---------------------------------------------
+	* Initial version.
