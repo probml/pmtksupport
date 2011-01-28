@@ -115,6 +115,7 @@ classdef graphViz4Matlab < handle
             Randlayout  };
         defaultEdgeColor  = [0, 0, 0];%[20,43,140]/255;
         edgeColors;
+        edgeStyles;
         square      = true;  % amounts to a the call "axis square"
         splitLabels = true;
     end
@@ -324,7 +325,9 @@ classdef graphViz4Matlab < handle
                 end
             end
             
-            [adjMatrix, currentLayout, nodeLabels, nodeDescriptions, nodeColors,obj.undirected,obj.edgeColors,obj.splitLabels,obj.doubleClickFn] = processArgsGV(varargin,...
+            [adjMatrix, currentLayout, nodeLabels, nodeDescriptions, nodeColors,...
+              obj.undirected, obj.edgeColors, obj.edgeStyles, ...
+              obj.splitLabels, obj.doubleClickFn] = processArgsGV(varargin,...
                 '-adjMat'               , []     ,...
                 '-layout'               , []     ,...
                 '-nodeLabels'           , {}     ,...
@@ -332,6 +335,7 @@ classdef graphViz4Matlab < handle
                 '-nodeColors'           , {}     ,...
                 '-undirected'           , false  ,...
                 '-edgeColors'           , []     ,...
+                '-edgeStyles'           , []     ,...
                 '-splitLabels'          , true   ,...
                 '-doubleClickFn'        , []     );
             
@@ -557,7 +561,19 @@ classdef graphViz4Matlab < handle
                         if ~isempty(edgeCol); edgeColor = edgeCol{1}; end
                     end
                 end
-                edge.arrow = plot(X,Y,'LineWidth',2,'HitTest','off','Color',edgeColor);
+                 edgeStyle = ':';
+                if ~isempty(obj.edgeStyles)
+                    candidates = obj.edgeStyles(findStringGV(edge.from.label,obj.edgeStyles(:,1)),:);
+                    if size(candidates,1)==1 && strcmpi(candidates(1,2),'all')
+                        edgeStyle = candidates{1,3};
+                    else
+                        edgeStyl = candidates(findStringGV(edge.to.label,candidates(:,2)),3);
+                        if ~isempty(edgeStyl); edgeStyle = edgeStyl{1}; end
+                    end
+                end
+                %edge.arrow = plot(X,Y,'LineWidth',2,'HitTest','off','Color',edgeColor);
+                edge.arrow = plot(X,Y,'LineWidth',3,'HitTest','off',...
+                  'Color',edgeColor,'linestyle',edgeStyle);
                 %fprintf('%s to %s \n', edge.from.label, edge.to.label);
                 %edgeColor
                 
