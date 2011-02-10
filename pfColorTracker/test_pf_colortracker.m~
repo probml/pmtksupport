@@ -27,16 +27,15 @@
 
 
 
-% Modified by Kevin Murphy to run on Matlab 2010a, 8 Feb 2011
 
 clear all
 
 close all
 
 
-video             = 'second.avi';
+video             = 'SECOND.AVI';
 %info              = aviinfo(video);
-mm = mmreader(video);
+mm = mmreader('SECOND.AVI');
 info = mmfileinfo(video);
 info = info.Video;
 
@@ -199,12 +198,12 @@ cte2_color        = (1/(sqrt(2*pi)*sigma_color));
 %warning('off','MATLAB:aviread:FunctionToBeRemoved')
 
 %mov               = aviread(video , offset_frame + 1);
-%img                = mov.cdata;
+%im                = mov.cdata;
 
-mov = read(mm, offset_frame);
-img                = mov; % 240 x 320 x 3 
+mov = read(mm, [offset_frame offset_frame+1]);
+im                = mov; % 240 x 320 x 3 x 2
 
-Z                 = double(img);
+Z                 = double(im);
 
 im                = rgb2hsv_mex(Z);
 
@@ -236,7 +235,7 @@ Q                 = q(: , ON);
 
 fig1              = figure(1);
 
-image(img);
+image(mov.cdata);
 
 set(gca , 'drawmode' , 'fast');
 
@@ -259,14 +258,11 @@ for k = 1 : nb_frame ;
 
     Sk               = A*Sk + Ck*randn(d , N);
 
-    %mov              = aviread(video , offset_frame + k);
-    %img               = (mov.cdata);
+    mov              = aviread(video , offset_frame + k);
 
-    mov = read(mm, offset_frame +k);
-    img                = mov; % 240 x 320 x 3
+    im               = (mov.cdata);
 
-
-    Z                = double(img);
+    Z                = double(im);
 
     im               = rgb2hsv_mex(Z);
 
@@ -315,7 +311,7 @@ for k = 1 : nb_frame ;
 
     fig1              = figure(1);
 
-    image(img);
+    image(mov.cdata);
 
     title(sprintf('N = %6.3f/%6.3f, Frame = %d, Redistribution =%d' , N_eff(k) , N_threshold , k , compteur))
 
@@ -339,7 +335,7 @@ for k = 1 : nb_frame ;
 
     hold off
 
-    %pause
+    pause
 end
 
 

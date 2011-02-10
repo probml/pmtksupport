@@ -1,3 +1,4 @@
-loadData('rcHelicopterTrackingVideo') % download from pmtkdata.googlecode.com
-% Call existing demo
-test_pf_colortracker
+%PMTKslow
+loadData('rcHelicopterTrackingVideo', 'isMatFile', false) % download from pmtkdata.googlecode.com
+setSeed(0);
+test_pf_colortracker % original function

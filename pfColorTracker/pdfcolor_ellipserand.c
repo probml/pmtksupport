@@ -154,7 +154,8 @@ void mexFunction( int nlhs, mxArray *plhs[] , int nrhs, const mxArray *prhs[] )
 	
 	double theta , cos_theta , sin_theta , tmp1 , tmp2 , s , t , invM;
 
-	double NAN = mxGetNaN();
+	//double NAN; NAN = mxGetNaN(); 
+    //double NAN = mxGetNaN();
 	
 	
 	const int *dimsZ=NULL , *dimsy=NULL , *dimse=NULL , *dimsvect_edge1=NULL , *dimsvect_edge2=NULL , *dimsvect_edge3=NULL;
