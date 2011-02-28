@@ -1,10 +1,10 @@
 # This Makefile is used under Linux
 
-MATLABDIR ?= /usr/local/matlab
+#MATLABDIR ?= /usr/local/matlab
 # for Mac
-# MATLABDIR ?= /opt/local/matlab
+MATLABDIR = /Applications/MATLAB_R2010a.app/
 
-CXX ?= g++
+CXX = g++
 #CXX = g++-4.1
 CFLAGS = -Wall -Wconversion -O3 -fPIC -I$(MATLABDIR)/extern/include
 
