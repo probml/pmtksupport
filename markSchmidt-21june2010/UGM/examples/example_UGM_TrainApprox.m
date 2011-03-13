@@ -37,8 +37,10 @@ adj(sub2ind([nNodes nNodes],ind,ind+1)) = 1;
 ind = 1:nNodes;
 exclude = sub2ind([nRows nCols],1:nRows,repmat(nCols,[1 nRows])); % No right edge for last column
 ind = setdiff(ind,exclude);
-adj(sub2ind([nNodes nNodes],ind,ind+nCols)) = 1;
+%adj(sub2ind([nNodes nNodes],ind,ind+nCols)) = 1;
+adj(sub2ind([nNodes nNodes],ind,ind+nRows)) = 1;
 
+      
 % Add Up/Left Edges
 adj = adj+adj';
 edgeStruct = UGM_makeEdgeStruct(adj,nStates);
