@@ -14,13 +14,13 @@ function [CA,CS] = score(X,gradF,n0,varargin)
 %     Riemann Sums for MCMC Estimation and
 %     Convergence Monitoring. EP CNRS
 
-% Copyright (C) 1999 Simo Särkkä
+% Copyright (C) 1999 Simo Sï¿½rkkï¿½
 %
 % This software is distributed under the GNU General Public 
 % Licence (version 2 or later); please refer to the file 
 % Licence.txt, included with the software, for details.
 
-if (nargin < 3) | isempty(n0)
+if (nargin < 3) || isempty(n0)
   n0 = 0;
 end
 X = X((n0+1):end,:,:);

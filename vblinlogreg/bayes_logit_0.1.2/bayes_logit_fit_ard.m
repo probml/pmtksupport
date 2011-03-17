@@ -84,7 +84,7 @@ for i = 1:max_iter
     end
     L_last = L;  
 end;
-if i == max_iter
+if 0 % i == max_iter
     warning('Bayes:maxIter', ...
         'Bayesian logistic regression reached maximum number of iterations.');
 end
