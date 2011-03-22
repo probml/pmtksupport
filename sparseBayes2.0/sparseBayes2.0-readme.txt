@@ -1,0 +1,4 @@
+%PMTKtitle SparseBayes 2.0
+%PMTKauthor Ian Nabney
+%PMTKurl http://www.vectoranomaly.com/downloads/downloads.htm
+%PMTKdate 20 August 2010

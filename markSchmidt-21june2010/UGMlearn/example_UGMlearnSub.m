@@ -114,3 +114,4 @@ if subDisplay
     title(sprintf('%s (err = %.3f)',type,err));
     pause;
 end
+

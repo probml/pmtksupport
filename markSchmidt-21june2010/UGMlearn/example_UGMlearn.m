@@ -3,9 +3,10 @@ close all
 display = 1; % Set to 0 if you don't want to draw the graphs
 
 %% Parameters of Experiment
+rand('state',0); randn('state',0); 
 nTrain = 500; % number of examples to use for training
 nTest = 1000; % number of examples to use for test
-nFeatures = 10; % number of features for each node
+nFeatures = 5; % 10; % number of features for each node
 nNodes = 10; % number of nodes
 nStates = 2; % number of states that each can take
 edgeProb = .5; % probability of each edge being included in the graph
@@ -32,6 +33,9 @@ randn('state',structureSeed);
 nInstances = nTrain+nTest;
 tied = 0;
 [y,adjTrue,X] = UGM_generate(nInstances,nFeatures,nNodes,edgeProb,nStates,ising,tied,edgeType);
+
+% X: Ncases * Nfeatures * Nnodes (real)
+% y: Ncases * Nnodes (1,2)
 
 if display
 f = 1;
