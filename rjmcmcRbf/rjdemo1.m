@@ -102,12 +102,15 @@ y=y(i);
 plot(x,ynn,'k:',x,y,'b+',x,ypred,'r','linewidth',2)
 ylabel('Train output','fontsize',15)
 xlabel('Train input','fontsize',15)
+printPmtkFigure('rjmcmcTrain')
+
 
 figure
 plot(xv,yvnn,'k:',xv,yv,'b+',xv,ypredv,'r','linewidth',2)
 ylabel('Test output','fontsize',15)
 xlabel('Test input','fontsize',15)
 legend('True function','Test data','Prediction');
+printPmtkFigure('rjmcmcTest')
 
 % COMPUTE THE MOST LIKELY MODES:
 % =============================
@@ -118,28 +121,27 @@ for p=pInt:pInt:chainLength,
   [probk(p/pInt,:),kmodes]=hist(k(1:p),support);
   probk(p/pInt,:)=probk(p/pInt,:)/p;
 end;
-figure(2)
-clf;
+figure;
 plot(pInt:pInt:chainLength,probk(:,1),'k--',...
   pInt:pInt:chainLength,probk(:,2),'b:',...
   pInt:pInt:chainLength,probk(:,3),'r',...
   pInt:pInt:chainLength,probk(:,4),'g-.','linewidth',3);
 xlabel('Chain length','fontsize',15)
 ylabel('p(k|y)','fontsize',15)
-legend('1','2','3','4')
+legend('k=1','k=2','k=3','k=4')
 modes = probk(chainLength/2,:);
-
+printPmtkFigure('rjmcmcKvsTime')
 
 %KPM
 figure;
 bar([probk(end,1) probk(end,2) probk(end,3) probk(end,4)])
 title('p(k|data)')
+printPmtkFigure('rjmcmcKhist')
 
 
 % HISTOGRAMS:
 % ==========
-figure(3)
-clf;
+figure;
 subplot(321)
 hist(delta(burnIn:chainLength),80)
 ylabel('Regularisation parameter','fontsize',15);
